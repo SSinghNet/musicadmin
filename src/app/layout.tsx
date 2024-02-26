@@ -16,7 +16,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={inter.className}>{children}</body>
+            <body className={`${inter.className} antialiased`}>
+                <a href="/">Home</a><br />
+                <a href="/album">Album</a><br/>
+                <a href="/artist">Artist</a><br/>
+                <a href="/tag">Tag</a><br/>
+                {children}
+            </body>
         </html>
     );
 }
