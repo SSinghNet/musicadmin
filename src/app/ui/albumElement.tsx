@@ -54,9 +54,6 @@ export default function AlbumElement(props: any) {
         // <Link href={"/album/" + props.data["id"]}>
         <div className="flex items-center py-3 text-lg border-t border-b px-4">
             <h2 className="w-1/12 text-sm p-1">
-                {/* <button onClick={() => deleteAlbum(props.data["id"])}>
-                    DELETE
-                </button> */}
                 <br />
                 {props.data["id"]}
             </h2>

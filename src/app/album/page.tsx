@@ -3,9 +3,9 @@ import Link from "next/link";
 import Modal from "../ui/modal";
 
 let json1 = async (page: Number): Promise<any> => {
-    const { signal } = new AbortController();
+    // const { signal } = new AbortController();
 
-    return await fetch("https://music.ssingh.net/album?format=json&page=" + page, { signal })
+    return await fetch("https://music.ssingh.net/album?format=json&page=" + page, { next: { revalidate: 0,  tags:  ['artists']} })
         .then((response) => {
             if (response.status == 404) {
                 return json1(0);
