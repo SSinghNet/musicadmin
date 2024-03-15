@@ -35,7 +35,7 @@ const DateEditComponent = (props: any) => {
 }
 
 const updateAlbum = async (id: Number, body: any) => {
-    await fetch("https://music.ssingh.net/album/" + id, {
+    await fetch("https://music-ssingh.onrender.com/album/" + id, {
         method: "PUT",
         body: JSON.stringify(
             body

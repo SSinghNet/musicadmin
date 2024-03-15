@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 const addAlbum = async (body : any) => {
-    await fetch("https://music.ssingh.net/album/", {
+    await fetch("https://music-ssingh.onrender.com/album/", {
         method: "POST",
         body: JSON.stringify(
             body
@@ -18,7 +18,7 @@ const addAlbum = async (body : any) => {
 
 const uploadImage = async (image: String) => {
     let key = "";
-    await fetch("https://music.ssingh.net/img", {
+    await fetch("https://music-ssingh.onrender.com/img", {
         method: "POST",
         body: JSON.stringify({
             "key": Date.now().toString(),

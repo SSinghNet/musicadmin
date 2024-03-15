@@ -2,7 +2,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 
 let json1 = async (id: Number) => {
-    return await fetch("https://music.ssingh.net/album/" + id + "?format=json")
+    return await fetch("https://music-ssingh.onrender.com/album/" + id + "?format=json")
         .then((response) => {
             if (response.status == 404) {
                 return 404;

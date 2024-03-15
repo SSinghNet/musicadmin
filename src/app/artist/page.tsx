@@ -6,7 +6,7 @@ import { revalidateTag } from 'next/cache';
 let json1 = async (page: Number): Promise<any> => {
     // const { signal } = new AbortController();
 
-    return await fetch("https://music.ssingh.net/artist?format=json&page=" + page, { next: { revalidate: 0,  tags:  ['artists']}} )
+    return await fetch("https://music-ssingh.onrender.com/artist?format=json&page=" + page, { next: { revalidate: 0,  tags:  ['artists']}} )
         .then((response) => {
             if (response.status == 404) {
                 return json1(0);

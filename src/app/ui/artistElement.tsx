@@ -23,7 +23,7 @@ const EditComponent = (props: any) => {
 
 
 const updateArtist = async (id: Number, body: any) => {
-    await fetch("https://music.ssingh.net/artist/" + id, {
+    await fetch("https://music-ssingh.onrender.com/artist/" + id, {
         method: "PUT",
         body: JSON.stringify(
             body
@@ -40,7 +40,7 @@ const updateArtist = async (id: Number, body: any) => {
 
 const uploadImage = async (image: String) => {
     let key = "";
-    await fetch("https://music.ssingh.net/img", {
+    await fetch("https://music-ssingh.onrender.com/img", {
         method: "POST",
         body: JSON.stringify({
             "key": Date.now().toString(),
